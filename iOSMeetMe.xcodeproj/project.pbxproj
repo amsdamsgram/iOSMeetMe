@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		542451131847EEEE003CDE85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542451121847EEEE003CDE85 /* Foundation.framework */; };
+		542451151847EEEE003CDE85 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542451141847EEEE003CDE85 /* CoreGraphics.framework */; };
+		542451171847EEEE003CDE85 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542451161847EEEE003CDE85 /* UIKit.framework */; };
+		5424511D1847EEEE003CDE85 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5424511B1847EEEE003CDE85 /* InfoPlist.strings */; };
+		5424511F1847EEEE003CDE85 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5424511E1847EEEE003CDE85 /* main.m */; };
+		542451231847EEEE003CDE85 /* XYZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 542451221847EEEE003CDE85 /* XYZAppDelegate.m */; };
+		542451251847EEEE003CDE85 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 542451241847EEEE003CDE85 /* Images.xcassets */; };
+		5424512C1847EEEE003CDE85 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5424512B1847EEEE003CDE85 /* XCTest.framework */; };
+		5424512D1847EEEE003CDE85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542451121847EEEE003CDE85 /* Foundation.framework */; };
+		5424512E1847EEEE003CDE85 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542451161847EEEE003CDE85 /* UIKit.framework */; };
+		542451361847EEEE003CDE85 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 542451341847EEEE003CDE85 /* InfoPlist.strings */; };
+		542451381847EEEE003CDE85 /* iOSMeetMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 542451371847EEEE003CDE85 /* iOSMeetMeTests.m */; };
+		542451441847EF4B003CDE85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 542451431847EF4B003CDE85 /* Main.storyboard */; };
+		542451471847F379003CDE85 /* XYZListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 542451461847F379003CDE85 /* XYZListViewController.m */; };
+		5424514A1847F659003CDE85 /* XYZAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 542451491847F659003CDE85 /* XYZAddViewController.m */; };
+		5424514D1847F771003CDE85 /* XYZAppointment.m in Sources */ = {isa = PBXBuildFile; fileRef = 5424514C1847F771003CDE85 /* XYZAppointment.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5424512F1847EEEE003CDE85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 542451071847EEEE003CDE85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5424510E1847EEEE003CDE85;
+			remoteInfo = iOSMeetMe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5424510F1847EEEE003CDE85 /* iOSMeetMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMeetMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		542451121847EEEE003CDE85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		542451141847EEEE003CDE85 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		542451161847EEEE003CDE85 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5424511A1847EEEE003CDE85 /* iOSMeetMe-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSMeetMe-Info.plist"; sourceTree = "<group>"; };
+		5424511C1847EEEE003CDE85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5424511E1847EEEE003CDE85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		542451201847EEEE003CDE85 /* iOSMeetMe-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSMeetMe-Prefix.pch"; sourceTree = "<group>"; };
+		542451211847EEEE003CDE85 /* XYZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZAppDelegate.h; sourceTree = "<group>"; };
+		542451221847EEEE003CDE85 /* XYZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZAppDelegate.m; sourceTree = "<group>"; };
+		542451241847EEEE003CDE85 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5424512A1847EEEE003CDE85 /* iOSMeetMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSMeetMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5424512B1847EEEE003CDE85 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		542451331847EEEE003CDE85 /* iOSMeetMeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSMeetMeTests-Info.plist"; sourceTree = "<group>"; };
+		542451351847EEEE003CDE85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		542451371847EEEE003CDE85 /* iOSMeetMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSMeetMeTests.m; sourceTree = "<group>"; };
+		542451431847EF4B003CDE85 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		542451451847F379003CDE85 /* XYZListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYZListViewController.h; path = ViewControllers/XYZListViewController.h; sourceTree = "<group>"; };
+		542451461847F379003CDE85 /* XYZListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYZListViewController.m; path = ViewControllers/XYZListViewController.m; sourceTree = "<group>"; };
+		542451481847F659003CDE85 /* XYZAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYZAddViewController.h; path = ViewControllers/XYZAddViewController.h; sourceTree = "<group>"; };
+		542451491847F659003CDE85 /* XYZAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYZAddViewController.m; path = ViewControllers/XYZAddViewController.m; sourceTree = "<group>"; };
+		5424514B1847F771003CDE85 /* XYZAppointment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYZAppointment.h; path = Classes/XYZAppointment.h; sourceTree = "<group>"; };
+		5424514C1847F771003CDE85 /* XYZAppointment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYZAppointment.m; path = Classes/XYZAppointment.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5424510C1847EEEE003CDE85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				542451151847EEEE003CDE85 /* CoreGraphics.framework in Frameworks */,
+				542451171847EEEE003CDE85 /* UIKit.framework in Frameworks */,
+				542451131847EEEE003CDE85 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		542451271847EEEE003CDE85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5424512C1847EEEE003CDE85 /* XCTest.framework in Frameworks */,
+				5424512E1847EEEE003CDE85 /* UIKit.framework in Frameworks */,
+				5424512D1847EEEE003CDE85 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		542451061847EEEE003CDE85 = {
+			isa = PBXGroup;
+			children = (
+				542451181847EEEE003CDE85 /* iOSMeetMe */,
+				542451311847EEEE003CDE85 /* iOSMeetMeTests */,
+				542451111847EEEE003CDE85 /* Frameworks */,
+				542451101847EEEE003CDE85 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		542451101847EEEE003CDE85 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5424510F1847EEEE003CDE85 /* iOSMeetMe.app */,
+				5424512A1847EEEE003CDE85 /* iOSMeetMeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		542451111847EEEE003CDE85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				542451121847EEEE003CDE85 /* Foundation.framework */,
+				542451141847EEEE003CDE85 /* CoreGraphics.framework */,
+				542451161847EEEE003CDE85 /* UIKit.framework */,
+				5424512B1847EEEE003CDE85 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		542451181847EEEE003CDE85 /* iOSMeetMe */ = {
+			isa = PBXGroup;
+			children = (
+				542451421847EF0B003CDE85 /* Classes */,
+				542451211847EEEE003CDE85 /* XYZAppDelegate.h */,
+				542451411847EF05003CDE85 /* ViewControllers */,
+				542451221847EEEE003CDE85 /* XYZAppDelegate.m */,
+				542451241847EEEE003CDE85 /* Images.xcassets */,
+				542451191847EEEE003CDE85 /* Supporting Files */,
+				542451431847EF4B003CDE85 /* Main.storyboard */,
+			);
+			path = iOSMeetMe;
+			sourceTree = "<group>";
+		};
+		542451191847EEEE003CDE85 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5424511A1847EEEE003CDE85 /* iOSMeetMe-Info.plist */,
+				5424511B1847EEEE003CDE85 /* InfoPlist.strings */,
+				5424511E1847EEEE003CDE85 /* main.m */,
+				542451201847EEEE003CDE85 /* iOSMeetMe-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		542451311847EEEE003CDE85 /* iOSMeetMeTests */ = {
+			isa = PBXGroup;
+			children = (
+				542451371847EEEE003CDE85 /* iOSMeetMeTests.m */,
+				542451321847EEEE003CDE85 /* Supporting Files */,
+			);
+			path = iOSMeetMeTests;
+			sourceTree = "<group>";
+		};
+		542451321847EEEE003CDE85 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				542451331847EEEE003CDE85 /* iOSMeetMeTests-Info.plist */,
+				542451341847EEEE003CDE85 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		542451411847EF05003CDE85 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				542451481847F659003CDE85 /* XYZAddViewController.h */,
+				542451491847F659003CDE85 /* XYZAddViewController.m */,
+				542451451847F379003CDE85 /* XYZListViewController.h */,
+				542451461847F379003CDE85 /* XYZListViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		542451421847EF0B003CDE85 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5424514B1847F771003CDE85 /* XYZAppointment.h */,
+				5424514C1847F771003CDE85 /* XYZAppointment.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5424510E1847EEEE003CDE85 /* iOSMeetMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5424513B1847EEEE003CDE85 /* Build configuration list for PBXNativeTarget "iOSMeetMe" */;
+			buildPhases = (
+				5424510B1847EEEE003CDE85 /* Sources */,
+				5424510C1847EEEE003CDE85 /* Frameworks */,
+				5424510D1847EEEE003CDE85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSMeetMe;
+			productName = iOSMeetMe;
+			productReference = 5424510F1847EEEE003CDE85 /* iOSMeetMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		542451291847EEEE003CDE85 /* iOSMeetMeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5424513E1847EEEE003CDE85 /* Build configuration list for PBXNativeTarget "iOSMeetMeTests" */;
+			buildPhases = (
+				542451261847EEEE003CDE85 /* Sources */,
+				542451271847EEEE003CDE85 /* Frameworks */,
+				542451281847EEEE003CDE85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				542451301847EEEE003CDE85 /* PBXTargetDependency */,
+			);
+			name = iOSMeetMeTests;
+			productName = iOSMeetMeTests;
+			productReference = 5424512A1847EEEE003CDE85 /* iOSMeetMeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		542451071847EEEE003CDE85 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = XYZ;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Damien Soulard";
+				TargetAttributes = {
+					542451291847EEEE003CDE85 = {
+						TestTargetID = 5424510E1847EEEE003CDE85;
+					};
+				};
+			};
+			buildConfigurationList = 5424510A1847EEEE003CDE85 /* Build configuration list for PBXProject "iOSMeetMe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 542451061847EEEE003CDE85;
+			productRefGroup = 542451101847EEEE003CDE85 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5424510E1847EEEE003CDE85 /* iOSMeetMe */,
+				542451291847EEEE003CDE85 /* iOSMeetMeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5424510D1847EEEE003CDE85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5424511D1847EEEE003CDE85 /* InfoPlist.strings in Resources */,
+				542451251847EEEE003CDE85 /* Images.xcassets in Resources */,
+				542451441847EF4B003CDE85 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		542451281847EEEE003CDE85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				542451361847EEEE003CDE85 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5424510B1847EEEE003CDE85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5424514D1847F771003CDE85 /* XYZAppointment.m in Sources */,
+				5424514A1847F659003CDE85 /* XYZAddViewController.m in Sources */,
+				542451231847EEEE003CDE85 /* XYZAppDelegate.m in Sources */,
+				5424511F1847EEEE003CDE85 /* main.m in Sources */,
+				542451471847F379003CDE85 /* XYZListViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		542451261847EEEE003CDE85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				542451381847EEEE003CDE85 /* iOSMeetMeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		542451301847EEEE003CDE85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5424510E1847EEEE003CDE85 /* iOSMeetMe */;
+			targetProxy = 5424512F1847EEEE003CDE85 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5424511B1847EEEE003CDE85 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5424511C1847EEEE003CDE85 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		542451341847EEEE003CDE85 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				542451351847EEEE003CDE85 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		542451391847EEEE003CDE85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5424513A1847EEEE003CDE85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5424513C1847EEEE003CDE85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSMeetMe/iOSMeetMe-Prefix.pch";
+				INFOPLIST_FILE = "iOSMeetMe/iOSMeetMe-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5424513D1847EEEE003CDE85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSMeetMe/iOSMeetMe-Prefix.pch";
+				INFOPLIST_FILE = "iOSMeetMe/iOSMeetMe-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5424513F1847EEEE003CDE85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOSMeetMe.app/iOSMeetMe";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSMeetMe/iOSMeetMe-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iOSMeetMeTests/iOSMeetMeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		542451401847EEEE003CDE85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOSMeetMe.app/iOSMeetMe";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSMeetMe/iOSMeetMe-Prefix.pch";
+				INFOPLIST_FILE = "iOSMeetMeTests/iOSMeetMeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5424510A1847EEEE003CDE85 /* Build configuration list for PBXProject "iOSMeetMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				542451391847EEEE003CDE85 /* Debug */,
+				5424513A1847EEEE003CDE85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5424513B1847EEEE003CDE85 /* Build configuration list for PBXNativeTarget "iOSMeetMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5424513C1847EEEE003CDE85 /* Debug */,
+				5424513D1847EEEE003CDE85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5424513E1847EEEE003CDE85 /* Build configuration list for PBXNativeTarget "iOSMeetMeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5424513F1847EEEE003CDE85 /* Debug */,
+				542451401847EEEE003CDE85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 542451071847EEEE003CDE85 /* Project object */;
+}
