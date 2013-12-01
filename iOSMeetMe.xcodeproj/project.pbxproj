@@ -23,6 +23,7 @@
 		542451471847F379003CDE85 /* XYZListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 542451461847F379003CDE85 /* XYZListViewController.m */; };
 		5424514A1847F659003CDE85 /* XYZAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 542451491847F659003CDE85 /* XYZAddViewController.m */; };
 		5424514D1847F771003CDE85 /* XYZAppointment.m in Sources */ = {isa = PBXBuildFile; fileRef = 5424514C1847F771003CDE85 /* XYZAppointment.m */; };
+		5426B193184A47F400BBD80A /* XYZEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5426B192184A47F400BBD80A /* XYZEditViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		542451491847F659003CDE85 /* XYZAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYZAddViewController.m; path = ViewControllers/XYZAddViewController.m; sourceTree = "<group>"; };
 		5424514B1847F771003CDE85 /* XYZAppointment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYZAppointment.h; path = Classes/XYZAppointment.h; sourceTree = "<group>"; };
 		5424514C1847F771003CDE85 /* XYZAppointment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYZAppointment.m; path = Classes/XYZAppointment.m; sourceTree = "<group>"; };
+		5426B191184A47F400BBD80A /* XYZEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYZEditViewController.h; path = ViewControllers/XYZEditViewController.h; sourceTree = "<group>"; };
+		5426B192184A47F400BBD80A /* XYZEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYZEditViewController.m; path = ViewControllers/XYZEditViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 		542451411847EF05003CDE85 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5426B191184A47F400BBD80A /* XYZEditViewController.h */,
+				5426B192184A47F400BBD80A /* XYZEditViewController.m */,
 				542451481847F659003CDE85 /* XYZAddViewController.h */,
 				542451491847F659003CDE85 /* XYZAddViewController.m */,
 				542451451847F379003CDE85 /* XYZListViewController.h */,
@@ -277,6 +282,7 @@
 			files = (
 				5424514D1847F771003CDE85 /* XYZAppointment.m in Sources */,
 				5424514A1847F659003CDE85 /* XYZAddViewController.m in Sources */,
+				5426B193184A47F400BBD80A /* XYZEditViewController.m in Sources */,
 				542451231847EEEE003CDE85 /* XYZAppDelegate.m in Sources */,
 				5424511F1847EEEE003CDE85 /* main.m in Sources */,
 				542451471847F379003CDE85 /* XYZListViewController.m in Sources */,
@@ -480,6 +486,7 @@
 				5424513D1847EEEE003CDE85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5424513E1847EEEE003CDE85 /* Build configuration list for PBXNativeTarget "iOSMeetMeTests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +495,7 @@
 				542451401847EEEE003CDE85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
