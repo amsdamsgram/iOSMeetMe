@@ -8,11 +8,13 @@
 
 #import "XYZListViewController.h"
 #import "XYZAddViewController.h"
+#import "XYZEditViewController.h"
 #import "XYZAppointment.h"
 
 @interface XYZListViewController ()
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *addButton;
 
 @property NSMutableArray *apptList;
 
@@ -22,13 +24,15 @@
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue
 {
-    XYZAddViewController *source = [segue sourceViewController];
-    XYZAppointment *appt = source.appt;
-    
-    if (appt) {
-        [self.apptList addObject:appt];
-        [self.tableView reloadData];
+    if ([segue.identifier isEqualToString:@"unwindFromAddView"]) {
+        XYZAddViewController *source = [segue sourceViewController];
+        XYZAppointment *appt = source.appt;
+        
+        if (appt) {
+            [self.apptList addObject:appt];
+        }
     }
+    [self.tableView reloadData];
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -36,6 +40,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
@@ -91,16 +96,21 @@
 
 - (IBAction)toggleEditMode:(id)sender
 {
-    /*
-    if ([self isEditing]) {
+    if ([self.tableView isEditing]) {
         [self.tableView setEditing:NO animated:YES];
-        UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(editButton)];
-        self.navigationItem.leftBarButtonItem = doneButton;
+        [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc]
+                                                   initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+                                                   target:self
+                                                   action:@selector(toggleEditMode:)] animated:YES];
+        self.navigationItem.rightBarButtonItem = self.addButton;
     } else {
         [self.tableView setEditing:YES animated:YES];
-        UIBarButtonItem *myButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editButton)];
-        self.navigationItem.leftBarButtonItem = myButton;
-    } */
+        [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc]
+                                                   initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                   target:self
+                                                   action:@selector(toggleEditMode:)] animated:YES];
+        self.navigationItem.rightBarButtonItem = nil;
+    }
 }
 
 
@@ -142,16 +152,17 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"editApptView"]) {
+        XYZEditViewController *editViewController = segue.destinationViewController;
+        editViewController.appt =
+                            [self.apptList objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+    }
 }
-
- */
 
 @end

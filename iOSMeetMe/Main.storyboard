@@ -8,12 +8,12 @@
         <scene sceneID="oTK-PU-F1Q">
             <objects>
                 <tableViewController id="xdR-zX-JT9" customClass="XYZListViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="YH5-Fk-QDe">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" allowsSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="YH5-Fk-QDe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ListPrototypeCell" textLabel="Dhx-lG-ETu" detailTextLabel="sOQ-M6-IdC" style="IBUITableViewCellStyleValue1" id="O0k-nK-h84">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ListPrototypeCell" editingAccessoryType="disclosureIndicator" textLabel="Dhx-lG-ETu" detailTextLabel="sOQ-M6-IdC" style="IBUITableViewCellStyleValue1" id="O0k-nK-h84">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O0k-nK-h84" id="oRz-Ps-mrl">
@@ -36,6 +36,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="tMA-YP-TNx" kind="push" identifier="editApptView" id="2di-p2-7Hb"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -51,11 +54,12 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="c2T-zi-t8X">
                             <connections>
-                                <segue destination="HgT-mi-led" kind="modal" id="lDT-cn-OaO"/>
+                                <segue destination="HgT-mi-led" kind="modal" identifier="addApptView" id="lDT-cn-OaO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="c2T-zi-t8X" id="L07-uw-bcL"/>
                         <outlet property="editButton" destination="Zkk-4Y-NEI" id="KQ3-mr-p06"/>
                     </connections>
                 </tableViewController>
@@ -111,12 +115,12 @@
                     <navigationItem key="navigationItem" title="New Appointment" id="eWh-lr-3Tg">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="URi-VO-aQK">
                             <connections>
-                                <segue destination="o1J-cg-Gb7" kind="unwind" unwindAction="unwindToList:" id="3T9-g5-W6k"/>
+                                <segue destination="o1J-cg-Gb7" kind="unwind" identifier="unwindFromAddView" unwindAction="unwindToList:" id="3T9-g5-W6k"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="H5E-43-OZ5">
                             <connections>
-                                <segue destination="o1J-cg-Gb7" kind="unwind" unwindAction="unwindToList:" id="xJq-Ng-oeX"/>
+                                <segue destination="o1J-cg-Gb7" kind="unwind" identifier="unwindFromAddView" unwindAction="unwindToList:" id="xJq-Ng-oeX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -130,7 +134,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MMM-ik-TWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="o1J-cg-Gb7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1474" y="28"/>
+            <point key="canvasLocation" x="1754" y="532"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dlc-up-r8v">
@@ -150,6 +154,69 @@
             </objects>
             <point key="canvasLocation" x="-117" y="28"/>
         </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="bbO-wI-5Q3">
+            <objects>
+                <viewController id="tMA-YP-TNx" customClass="XYZEditViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xIE-LZ-ACe"/>
+                        <viewControllerLayoutGuide type="bottom" id="bTL-gf-6sL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oOG-Ku-UDj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UKa-B2-jF9">
+                                <rect key="frame" x="20" y="102" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Appointment with..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ox-o8-S5v">
+                                <rect key="frame" x="20" y="140" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gaB-rg-z2T">
+                                <rect key="frame" x="20" y="178" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gaB-rg-z2T" secondAttribute="trailing" constant="20" id="0og-i8-w7B"/>
+                            <constraint firstItem="gaB-rg-z2T" firstAttribute="leading" secondItem="oOG-Ku-UDj" secondAttribute="leading" constant="20" id="5Ru-3q-M9f"/>
+                            <constraint firstAttribute="trailing" secondItem="UKa-B2-jF9" secondAttribute="trailing" constant="20" id="CdX-pd-5vJ"/>
+                            <constraint firstAttribute="trailing" secondItem="9ox-o8-S5v" secondAttribute="trailing" constant="20" id="He3-vX-R4m"/>
+                            <constraint firstItem="UKa-B2-jF9" firstAttribute="top" secondItem="xIE-LZ-ACe" secondAttribute="bottom" constant="38" id="JeR-sx-Zwi"/>
+                            <constraint firstItem="UKa-B2-jF9" firstAttribute="leading" secondItem="oOG-Ku-UDj" secondAttribute="leading" constant="20" id="R9F-pe-ZwR"/>
+                            <constraint firstItem="gaB-rg-z2T" firstAttribute="top" secondItem="xIE-LZ-ACe" secondAttribute="bottom" constant="114" id="Rme-Cw-xMw"/>
+                            <constraint firstItem="9ox-o8-S5v" firstAttribute="leading" secondItem="oOG-Ku-UDj" secondAttribute="leading" constant="20" id="fHu-FJ-DkE"/>
+                            <constraint firstItem="9ox-o8-S5v" firstAttribute="top" secondItem="xIE-LZ-ACe" secondAttribute="bottom" constant="76" id="leg-0Q-jek"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hkb-hP-3st">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="LPZ-PY-KiK">
+                            <connections>
+                                <segue destination="Lvo-2z-UIv" kind="unwind" identifier="unwindFromEditView" unwindAction="unwindToList:" id="J9E-U2-fOM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descInput" destination="gaB-rg-z2T" id="Pmu-tv-LP9"/>
+                        <outlet property="nameInput" destination="9ox-o8-S5v" id="9Be-Kp-F5a"/>
+                        <outlet property="saveButton" destination="LPZ-PY-KiK" id="CPc-va-mle"/>
+                        <outlet property="titleInput" destination="UKa-B2-jF9" id="evn-fI-ejF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wlI-jZ-2yI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Lvo-2z-UIv" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1024" y="-368"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="3aq-ip-0iz">
             <objects>
@@ -166,7 +233,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKp-KK-EPn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="948" y="28"/>
+            <point key="canvasLocation" x="1024" y="532"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
