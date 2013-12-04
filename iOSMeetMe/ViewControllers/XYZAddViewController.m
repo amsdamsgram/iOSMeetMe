@@ -35,6 +35,7 @@
 	// Do any additional setup after loading the view.
 }
 
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -44,7 +45,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if (sender == self.saveButton) {
-        self.appt = [[XYZAppointment alloc] initWithTitle:self.titleInput.text name:self.nameInput.text andDescription:self.descInput.text];
+        self.appt = [Appointment createEntity];
+        
+        self.appt = [self.appt initWithTitle:self.titleInput.text name:self.nameInput.text andDescription:self.descInput.text];
+        
+        [[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
     }
 }
 

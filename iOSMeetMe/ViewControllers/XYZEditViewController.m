@@ -53,9 +53,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if (sender == self.saveButton) {
-        self.appt.title = self.titleInput.text;
-        self.appt.name = self.nameInput.text;
-        self.appt.desc = self.descInput.text;
+        self.appt = [self.appt initWithTitle:self.titleInput.text name:self.nameInput.text andDescription:self.descInput.text];
+        
+        [[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
     }
 }
 

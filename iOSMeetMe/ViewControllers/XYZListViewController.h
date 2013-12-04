@@ -10,4 +10,15 @@
 
 @interface XYZListViewController : UITableViewController
 
+#define kApptKey @"apptKey"
+#define kCurrentId @"currentId"
+
+#define kApptId @"id"
+#define kApptTitle @"title"
+#define kApptName @"name"
+#define kApptDescription @"desc"
+#define kApptDate @"date"
+#define kApptStartTime @"startTime"
+#define kApptEndTime @"endTime"
+
 @end

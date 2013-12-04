@@ -10,6 +10,7 @@
 #import "XYZAddViewController.h"
 #import "XYZEditViewController.h"
 #import "XYZAppointment.h"
+#import "Appointment.h"
 
 @interface XYZListViewController ()
 
@@ -24,14 +25,7 @@
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue
 {
-    if ([segue.identifier isEqualToString:@"unwindFromAddView"]) {
-        XYZAddViewController *source = [segue sourceViewController];
-        XYZAppointment *appt = source.appt;
-        
-        if (appt) {
-            [self.apptList addObject:appt];
-        }
-    }
+    [self fetchAppt];
     [self.tableView reloadData];
 }
 
@@ -48,17 +42,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self fetchAppt];
     
-    self.apptList = [[NSMutableArray alloc] init];
-    XYZAppointment *item = [[XYZAppointment alloc]
-                            initWithTitle:@"Test" name:@"Dam" andDescription:@"desc"];
-    [self.apptList addObject:item];
-
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)fetchAppt
+{
+    self.apptList = [NSMutableArray arrayWithArray:[Appointment findAllSortedBy:@"date" ascending:YES]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -87,12 +82,20 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    XYZAppointment *appt = [self.apptList objectAtIndex:indexPath.row];
+    Appointment *appt = [self.apptList objectAtIndex:indexPath.row];
     cell.textLabel.text = appt.title;
-    cell.detailTextLabel.text = [appt dateToString:appt.startTime withDateStyle:NSDateFormatterNoStyle andTimeStyle:NSDateFormatterShortStyle];
- 
+    cell.detailTextLabel.text = [self dateToString:appt.startTime withDateStyle:NSDateFormatterNoStyle andTimeStyle:NSDateFormatterShortStyle];
+    
     return cell;
 }
+
+- (NSString *)dateToString:(NSDate *)date withDateStyle:(NSDateFormatterStyle)dateStyle andTimeStyle:(NSDateFormatterStyle)timeStyle
+{
+    return [NSDateFormatter localizedStringFromDate:date
+                                          dateStyle:dateStyle
+                                          timeStyle:timeStyle];
+}
+
 
 - (IBAction)toggleEditMode:(id)sender
 {
@@ -128,7 +131,10 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        Appointment *appt = [self.apptList objectAtIndex:indexPath.row];
         [self.apptList removeObjectAtIndex:indexPath.row];
+        [appt deleteEntity];
+        [[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {

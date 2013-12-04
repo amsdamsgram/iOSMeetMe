@@ -12,6 +12,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Default store named iOSMeetMe
+    [MagicalRecord setupCoreDataStack];
     return YES;
 }
 

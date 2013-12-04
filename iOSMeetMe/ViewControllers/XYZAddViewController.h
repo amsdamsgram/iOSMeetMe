@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "XYZAppointment.h"
+#import "Appointment.h"
 
 @interface XYZAddViewController : UIViewController
 
-@property XYZAppointment *appt;
+@property Appointment *appt;
 
 @end

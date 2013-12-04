@@ -92,7 +92,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kRS-kX-jYm">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E94-6X-eak">
                                 <rect key="frame" x="20" y="178" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -101,11 +101,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kRS-kX-jYm" firstAttribute="leading" secondItem="07l-h2-Ub1" secondAttribute="leading" constant="20" id="CxH-wM-upu"/>
+                            <constraint firstItem="E94-6X-eak" firstAttribute="top" secondItem="BBR-Zw-frR" secondAttribute="bottom" constant="114" id="4xg-HW-PfK"/>
                             <constraint firstItem="SQp-xr-CxO" firstAttribute="leading" secondItem="07l-h2-Ub1" secondAttribute="leading" constant="20" id="Lnr-Gh-Dh8"/>
-                            <constraint firstItem="kRS-kX-jYm" firstAttribute="top" secondItem="BBR-Zw-frR" secondAttribute="bottom" constant="114" id="Oyu-zC-cKg"/>
+                            <constraint firstAttribute="trailing" secondItem="E94-6X-eak" secondAttribute="trailing" constant="20" id="ONZ-Lb-N19"/>
                             <constraint firstAttribute="trailing" secondItem="SQp-xr-CxO" secondAttribute="trailing" constant="20" id="RoZ-PZ-K1Q"/>
-                            <constraint firstAttribute="trailing" secondItem="kRS-kX-jYm" secondAttribute="trailing" constant="20" id="Xvb-CA-laI"/>
+                            <constraint firstItem="E94-6X-eak" firstAttribute="leading" secondItem="07l-h2-Ub1" secondAttribute="leading" constant="20" id="W3S-dd-lc2"/>
                             <constraint firstItem="SQp-xr-CxO" firstAttribute="top" secondItem="BBR-Zw-frR" secondAttribute="bottom" constant="76" id="hMQ-lZ-5Tp"/>
                             <constraint firstAttribute="trailing" secondItem="siO-3V-Q7z" secondAttribute="trailing" constant="20" id="q4i-8S-BNQ"/>
                             <constraint firstItem="siO-3V-Q7z" firstAttribute="top" secondItem="BBR-Zw-frR" secondAttribute="bottom" constant="38" id="rdw-cp-vrj"/>
@@ -125,7 +125,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="descInput" destination="kRS-kX-jYm" id="vff-VY-B3Y"/>
+                        <outlet property="descInput" destination="E94-6X-eak" id="i3Q-JC-fP5"/>
                         <outlet property="nameInput" destination="SQp-xr-CxO" id="0YI-Qe-it3"/>
                         <outlet property="saveButton" destination="H5E-43-OZ5" id="Yzo-on-3MF"/>
                         <outlet property="titleInput" destination="siO-3V-Q7z" id="B3B-aC-NPg"/>
@@ -178,7 +178,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gaB-rg-z2T">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rYz-Hf-3DZ">
                                 <rect key="frame" x="20" y="178" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -187,14 +187,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="gaB-rg-z2T" secondAttribute="trailing" constant="20" id="0og-i8-w7B"/>
-                            <constraint firstItem="gaB-rg-z2T" firstAttribute="leading" secondItem="oOG-Ku-UDj" secondAttribute="leading" constant="20" id="5Ru-3q-M9f"/>
+                            <constraint firstItem="rYz-Hf-3DZ" firstAttribute="top" secondItem="xIE-LZ-ACe" secondAttribute="bottom" constant="114" id="5dd-kH-xRE"/>
                             <constraint firstAttribute="trailing" secondItem="UKa-B2-jF9" secondAttribute="trailing" constant="20" id="CdX-pd-5vJ"/>
                             <constraint firstAttribute="trailing" secondItem="9ox-o8-S5v" secondAttribute="trailing" constant="20" id="He3-vX-R4m"/>
                             <constraint firstItem="UKa-B2-jF9" firstAttribute="top" secondItem="xIE-LZ-ACe" secondAttribute="bottom" constant="38" id="JeR-sx-Zwi"/>
                             <constraint firstItem="UKa-B2-jF9" firstAttribute="leading" secondItem="oOG-Ku-UDj" secondAttribute="leading" constant="20" id="R9F-pe-ZwR"/>
-                            <constraint firstItem="gaB-rg-z2T" firstAttribute="top" secondItem="xIE-LZ-ACe" secondAttribute="bottom" constant="114" id="Rme-Cw-xMw"/>
+                            <constraint firstAttribute="trailing" secondItem="rYz-Hf-3DZ" secondAttribute="trailing" constant="20" id="deb-L5-utE"/>
                             <constraint firstItem="9ox-o8-S5v" firstAttribute="leading" secondItem="oOG-Ku-UDj" secondAttribute="leading" constant="20" id="fHu-FJ-DkE"/>
+                            <constraint firstItem="rYz-Hf-3DZ" firstAttribute="leading" secondItem="oOG-Ku-UDj" secondAttribute="leading" constant="20" id="ibt-dg-IAq"/>
                             <constraint firstItem="9ox-o8-S5v" firstAttribute="top" secondItem="xIE-LZ-ACe" secondAttribute="bottom" constant="76" id="leg-0Q-jek"/>
                         </constraints>
                     </view>
@@ -206,7 +206,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="descInput" destination="gaB-rg-z2T" id="Pmu-tv-LP9"/>
+                        <outlet property="descInput" destination="rYz-Hf-3DZ" id="R7k-I1-WkK"/>
                         <outlet property="nameInput" destination="9ox-o8-S5v" id="9Be-Kp-F5a"/>
                         <outlet property="saveButton" destination="LPZ-PY-KiK" id="CPc-va-mle"/>
                         <outlet property="titleInput" destination="UKa-B2-jF9" id="evn-fI-ejF"/>
